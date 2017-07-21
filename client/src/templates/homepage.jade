@@ -1,0 +1,23 @@
+extend default
+
+block content
+
+  p.
+    Upload a race results file, and click 'Upload'<br/> 
+    - or -<br/>
+    Paste in results text and click 'Search'.
+  p.
+    To be properly searchable the file/text needs to have individual results on separate lines of text, or in separate rows of a table.
+
+  div#fileUpload
+    span File upload:<br>
+    input(type='file', id='resultsFile')
+    input(type='button', id='goUpload', value='Upload')
+
+  div#pasteText
+    span Paste text:<br>
+    textarea(cols='50', rows='5', id='resultsText')
+    input(type='button', id='searchText', value='Search')
+
+  div.datagrid(id='uploadResults')
+    table(id='resultsTable')

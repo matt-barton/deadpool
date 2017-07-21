@@ -1,0 +1,28 @@
+doctype html
+html
+  head
+    link(href='css/bootstrap.min.css', rel='stylesheet')
+    link(href='css/font-awesome.min.css', rel='stylesheet', type='text/css')
+    link(href='https://fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic', rel='stylesheet', type='text/css')
+    link(href='https://fonts.googleapis.com/css?family=Montserrat:400,700', rel='stylesheet', type='text/css')
+    link(href='css/grayscale.min.css', rel='stylesheet')
+    script(src='https://code.jquery.com/jquery-3.2.1.min.js', integrity='sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=', crossorigin='anonymous')
+    script(src='/js/app.js')
+    title=title
+
+  body
+    .header
+      h1.page-title Strider Finder
+
+    ul.nav
+      li: a(href='/') Home
+      li: a(href='/about') About
+      li: a(href='/contact') Contact
+      if auth
+        li: a(href='/auth/logout') Logout
+
+    .main-content
+      block content
+
+    .footer
+      p Copyright © 2017 Matt Barton
