@@ -2,6 +2,7 @@ const dotenv = require('dotenv');
 dotenv.load();
 
 const express = require('express'),
+  mongoose = require('mongoose'),
   cookieParser = require('cookie-parser'),
   bodyParser = require('body-parser'),
   fileUpload = require('express-fileupload'),
@@ -13,6 +14,9 @@ const express = require('express'),
   client = require('./client'),
   app = express(),
   port = process.env.PORT || 3000;
+
+mongoose.connect('mongodb://localhost/deadpool');
+mongoose.Promise = global.Promise;
 
 app.use(cookieParser('a9wnggbsw64byjksyus5ntalf923g32hs'));
 app.use(fileUpload());

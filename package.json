@@ -17,9 +17,11 @@
     "fb": "2.0.0",
     "jade": "1.11.0",
     "mongodb": "2.2.30",
+    "mongoose": "^4.11.7",
     "mz": "2.6.0",
     "passport": "0.3.2",
     "passport-facebook": "2.1.1",
+    "passport-twitter": "^1.0.4",
     "stylus": "0.54.5",
     "xlsx": "0.10.6"
   },
