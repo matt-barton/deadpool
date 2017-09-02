@@ -34,12 +34,7 @@
     "nodemon": "1.9.2"
   },
   "scripts": {
-    "build-css": "stylus client/src/stylesheets/index.styl -o client/public/css",
-    "watch-css": "stylus client/src/stylesheets/index.styl -o client/public/css -w",
-    "clean": "rm -rf client/public/css && mkdir -p client/public/css",
-    "build": "npm run clean && npm run build-css",
-    "watch": "npm run clean && npm run watch-css & nodemon deadpool -e js,jade",
-    "start": "node deadpool"
+    "start": "nodemon deadpool -e js,jade"
   },
   "repository": {
     "type": "git",
