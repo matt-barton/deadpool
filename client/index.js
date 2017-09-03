@@ -4,7 +4,6 @@ const express = require('express'),
   isAuth = require('../lib/auth_middleware');
 
 app.get('/', isAuth, (req, res, next) => {
-  console.log('x');
   try {
     var html = jade.compileFile('./client/src/templates/homepage.jade')({ title: 'Home', auth: req.isAuthenticated() });
     res.send(html);
