@@ -4,8 +4,9 @@ block content
 
   p This is a dark game, not to be taken seriously. Login via the Facebook or Twitter.
   
-  a(href='/auth/facebook')
-    img(src='/images/fb_login.png', alt='Login with Facebook')
+  unless auth
+    a(href='/auth/facebook')
+      img(src='/images/fb_login.png', alt='Login with Facebook')
 
-  a(href='/auth/twitter')
-    img(src='/images/twitter_login.png', alt='Login with Twitter')
+    a(href='/auth/twitter')
+      img(src='/images/twitter_login.png', alt='Login with Twitter')

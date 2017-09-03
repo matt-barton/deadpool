@@ -1,9 +1,12 @@
 extend default
 
 block content
-  if !auth
+  unless auth
     a(href='/auth/facebook')
       img(src='/images/fb_login.png', alt='Login with Facebook')
+
+    a(href='/auth/twitter')
+      img(src='/images/twitter_login.png', alt='Login with Twitter')
 
   p.
     This utility helps identify Steel City Striders by name in race result lists.  Sometimes
